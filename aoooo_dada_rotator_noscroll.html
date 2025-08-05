@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>A.O.O.O.O. dada rotátor</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        body {
+            font-family: monospace;
+            font-size: 1.2rem;
+            text-align: center;
+            background-color: #f9f9f9;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #dada {
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div id="dada">Načítám dada výklad...</div>
+
+    <script>
+        const variants = [
+            "A.O.O.O.O. = Automatický Odpor Ozdobených Opic Oblékajících Ocel",
+            "A.O.O.O.O. = Architektonicky Obskurní Ornamenty Občas Oscilují Obočím",
+            "A.O.O.O.O. = Antigravitační Ornamenty Odmítající Opakování a Oběť",
+            "A.O.O.O.O. = Ananasová Opera Ospalých Orlů Odlétajících Obřadem",
+            "A.O.O.O.O. = Artefakty Ozářené Osudem, Okem Ocelového Okultisty",
+            "A.O.O.O.O. = Ach, Ouha! Opět Ornamenty Ovládly Obývák"
+        ];
+        const display = document.getElementById("dada");
+
+        function rotateDada() {
+            const randomIndex = Math.floor(Math.random() * variants.length);
+            display.textContent = variants[randomIndex];
+        }
+
+        rotateDada(); // první výklad
+        setInterval(rotateDada, 5000); // mění každých 5s
+    </script>
+</body>
+</html>
